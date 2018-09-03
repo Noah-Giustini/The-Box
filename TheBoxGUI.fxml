@@ -8,7 +8,7 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BoxFXMLController">
    <children>
       <Button fx:id="roll" layoutX="268.0" layoutY="279.0" mnemonicParsing="false" onAction="#rollRandom" text="Roll" />
-      <ImageView fx:id="result" fitHeight="150.0" fitWidth="200.0" layoutX="191.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="result" fitHeight="150.0" fitWidth="200.0" layoutX="191.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="76.0" />
       <Label fx:id="textOutput" layoutX="218.0" layoutY="246.0" text="Please choose a game" />
       <MenuButton fx:id="gameSelect" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="Game Select">
         <items>

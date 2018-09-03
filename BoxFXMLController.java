@@ -45,6 +45,9 @@ public class BoxFXMLController implements Initializable{
 
         private Random rand = new Random();
 
+        private String[] fortniteLocats = new String[]{"crates","dusty","factory","fatal","flush","greasy","haunted","junk","lazy","lonely","loot","lucky","paradise",
+                                                       "pleasant","retail","risky","salty","shifty","snobby","soccer","tilted","tomato","wailing"};
+
     @Override
     public void initialize(URL url, ResourceBundle rb){
         
@@ -72,28 +75,43 @@ public class BoxFXMLController implements Initializable{
         gameState = 3;
         this.textOutput.setText("R6S: Defending as...");
     }
-    private int spin(ActionEvent event){
+    private void spin(ActionEvent event){
         if (gameState == 1){
-            int value = rand.nextInt(6) + 1;
-            System.out.println(value);
-            return value;
+            int value = rand.nextInt(23);
+            System.out.println(fortniteLocats[value]);
+            try{
+                showResult(fortniteLocats[value]);
+            }
+            catch(Exception e){
+
+            }
         }
         else if (gameState == 2){
             int value = rand.nextInt(6) + 1;
             System.out.println(value);
-            return value;
         }
         else if (gameState == 3){
             int value = rand.nextInt(6) + 1;
             System.out.println(value);
-            return value;
         }
         else {
             this.textOutput.setText("Please select a game");
-            return -1;
         }
     }
-    private void showResult(){
+    private void showResult(String pic){
+        if (gameState == 1){
+            result.setImage(new Image(pic + ".png"));
+        }
+        else if (gameState == 2){
+            
+        }
+        else if (gameState == 3){
+            
+        }
+        else{
+
+        }
+
 
     }
 }
