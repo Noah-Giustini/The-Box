@@ -48,6 +48,12 @@ public class BoxFXMLController implements Initializable{
         private String[] fortniteLocats = new String[]{"crates","dusty","factory","fatal","flush","greasy","haunted","junk","lazy","lonely","loot","lucky","paradise",
                                                        "pleasant","retail","risky","salty","shifty","snobby","soccer","tilted","tomato","wailing"};
 
+        private String[] fortniteText = new String[]{"Crates","Dusty Divot","Factory","Fatal Fields","Flush Factory","Greasy Grove","Haunted Hills","Junk Junction",
+                                                     "Lazy Links","Lonely Lodge","Loot Lake","Lucky Landing","Paradise Palms","Pleasant Park","Retail Row",
+                                                     "Risky Reels","Salty Springs","Shifty Shafts","Snobby Shores","Soccer","Tilted Towers","Tomato Temple",
+                                                     "Wailing Woods"};
+
+
     @Override
     public void initialize(URL url, ResourceBundle rb){
         
@@ -78,9 +84,9 @@ public class BoxFXMLController implements Initializable{
     private void spin(ActionEvent event){
         if (gameState == 1){
             int value = rand.nextInt(23);
-            System.out.println(fortniteLocats[value]);
             try{
                 showResult(fortniteLocats[value]);
+                this.textOutput.setText(fortniteText[value]);
             }
             catch(Exception e){
 
